@@ -110,7 +110,7 @@ case "$FIRMWARE" in
 		ath11k_set_macflag
 		;;
 	qnap,301w)
-		caldata_extract "0:ART" 0x1000 0x20000
+		caldata_extract "0:art" 0x1000 0x20000
 		label_mac=$(get_mac_label)
 		ath11k_patch_mac $(macaddr_add "$label_mac" 6) 0
 		ath11k_patch_mac $(macaddr_add "$label_mac" 7) 1
